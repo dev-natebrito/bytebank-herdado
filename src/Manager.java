@@ -13,6 +13,6 @@ public class Manager extends Employee {
     @Override
     public double getBonus() {
         System.out.println("manager bonus");
-        return super.getBonus() + super.getSalary();
+        return super.getSalary();
     }
 }

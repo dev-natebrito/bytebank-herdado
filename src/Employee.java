@@ -4,10 +4,8 @@ public abstract class Employee {
     private String cpf;
     private double salary;
 
-    public double getBonus (){
-        System.out.println("Employee Bonus");
-        return this.salary * 0.1 ;
-    }
+    public abstract double getBonus ();
+
 
     public String getName() {
         return name;
