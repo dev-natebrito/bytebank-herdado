@@ -9,9 +9,9 @@ public class TestManager {
     System.out.println(m1.getCpf());
     System.out.println(m1.getSalary());
 
-    //        m1.setPassword(1233);
-    //        boolean success = m1.authenticated(1233);
-    //        System.out.println(success);
-    //        System.out.println(m1.getBonus());
+            m1.setPassword(1233);
+            boolean success = m1.authenticated(1233);
+            System.out.printf("Connect status: %s%n",success);
+            System.out.println(m1.getBonus());
   }
 }

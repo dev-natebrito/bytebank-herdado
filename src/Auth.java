@@ -1,12 +1,6 @@
-public abstract class Auth {
+public interface Auth {
 
-  private int password;
+  void setPassword(int password);
 
-  public void setPassword(int password) {
-    this.password = password;
-  }
-
-  public boolean authenticated(int password) {
-    return this.password == password;
-  }
+  boolean authenticated(int password);
 }
