@@ -1,8 +1,8 @@
 public class InternalSystem {
-  private int password = 2222;
 
   public void authenticated(Auth auth) {
-    boolean isAuthenticated = auth.authenticated(this.password);
+    int password = 2_222;
+    boolean isAuthenticated = auth.authenticated(password);
     if (isAuthenticated) {
       System.out.println("welcome");
     } else {

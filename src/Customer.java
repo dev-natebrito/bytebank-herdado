@@ -1,12 +1,16 @@
 public class Customer implements Auth {
-	private int password;
+
+	private final Authenticator authenticator;
+	public Customer(){
+		this.authenticator = new Authenticator();
+	}
 	@Override
 	public void setPassword(int password) {
-	this.password = password;
+		this.authenticator.setPassword(password);
 	}
 
 	@Override
 	public boolean authenticated(int password) {
-		return this.password == password;
+		return authenticator.authenticated(password);
 	}
 }

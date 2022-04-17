@@ -1,5 +1,8 @@
 public class Manager extends Employee implements Auth{
-private int password;
+private final Authenticator authenticator;
+public Manager(){
+this.authenticator = new Authenticator();
+}
   @Override
   public double getBonus() {
     System.out.println("manager bonus");
@@ -8,11 +11,11 @@ private int password;
 
   @Override
   public void setPassword(int password) {
-    this.password = password;
+    this.authenticator.setPassword(password);
   }
 
   @Override
   public boolean authenticated(int password) {
-    return this.password == password;
+    return authenticator.authenticated(password);
   }
 }
